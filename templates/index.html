@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraped Data</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="main flex">
+        <div class="heading flex">
+            <h1>👀 Tech News Website 👀</h1>
+        </div>
+
+        {% for entry in data %}
+        <div class="data-box">
+            <a href="{{ entry['link'] }}" target="_blank">
+                <!-- <div id="content"> -->
+
+                    <p id="title">{{ entry['title'] }}</p>
+                    <p id="votes">Votes: {{ entry['votes'] }}</p>
+                <!-- </div> -->
+            </a>
+        </div>
+        {% endfor %}
+
+    </div>
+</body>
+
+</html>
